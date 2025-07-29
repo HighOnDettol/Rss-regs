@@ -8,24 +8,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter for general text, Playfair Display for heading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
+            /* Saffron background color for the body */
+            background-color: #FF9933;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center py-10">
+<body class="bg-[#FF9933] min-h-screen flex items-center justify-center py-10">
     <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-4xl">
-        <!-- Header Section with Placeholder Banner -->
-        <div class="mb-8 rounded-lg overflow-hidden">
-            <img src="https://placehold.co/1000x150/4CAF50/FFFFFF?text=JOIN%20RSS%20REGISTRATION%20FORM" alt="Registration Banner" class="w-full h-auto rounded-lg">
+        <!-- Redesigned Header Section with Saffron Background -->
+        <div class="bg-[#FF9933] text-white p-6 rounded-lg mb-8 flex flex-col items-center justify-center text-center">
+            <img src="https://i.pinimg.com/736x/b0/83/9d/b0839d3bc8147e134ad21bf1049c7cf7.jpg" alt="RSS Logo" class="h-28 w-28 object-contain rounded-full mb-4 shadow-lg">
+            <h1 class="font-playfair text-5xl font-bold">Join RSS</h1>
         </div>
 
         <p class="text-center text-gray-600 mb-6 text-sm">Fields marked with <span class="text-red-500">*</span> mark are mandatory</p>
 
-        <!-- The form will submit to Formspree. Replace YOUR_FORMSPREE_ENDPOINT with your actual endpoint. -->
+        <!-- The form will submit to Formspree. -->
         <form action="https://formspree.io/f/mzzvrkkk" method="POST" class="space-y-6">
 
             <!-- Applicant Information Section -->
@@ -241,6 +247,17 @@
                         <input type="text" name="year" id="year" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="e.g., 2025 or Final Year">
                     </div>
                 </div>
+
+                <!-- Why join RSS? -->
+                <div class="md:col-span-2">
+                    <label for="whyJoinRSS" class="block text-sm font-medium text-gray-700 mb-1">WHY DO YOU WANT TO JOIN RSS?</label>
+                    <div class="relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
+                            <i class="fas fa-question-circle text-gray-400"></i>
+                        </div>
+                        <textarea name="whyJoinRSS" id="whyJoinRSS" rows="4" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Please explain your reasons for joining..."></textarea>
+                    </div>
+                </div>
             </div>
 
             <!-- Present Address Section -->
@@ -276,213 +293,71 @@
                             <option value="Odisha">Odisha</option>
                             <option value="Punjab">Punjab</option>
                             <option value="Rajasthan">Rajasthan</option>
-
-<option value="Sikkim">Sikkim</option>
-
-<option value="Tamil Nadu">Tamil
-
-Nadu</option>
-
-<option
-
-value="Telangana">Telangana</option>
-
-<option value="Tripura">Tripura</option>
-
-<option value="Uttar Pradesh">Uttar
-
-Pradesh</option>
-
-<option
-
-value="Uttarakhand">Uttarakhand</option>
-
-<option value="West Bengal">West
-
-Bengal</option>
-
-<option value="Andaman and Nicobar
-
-Islands">Andaman and Nicobar Islands</option>
-
-<option
-
-value="Chandigarh">Chandigarh</option>
-
-<option value="Dadra and Nagar Haveli and
-
-Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-
-<option
-
-value="Lakshadweep">Lakshadweep</option>
-
-<option value="Delhi">Delhi</option>
-
-<option
-
-value="Puducherry">Puducherry</option>
-
-</select>
-
-</div>
-
-</div>
-
-<!-- District -->
-
-<div>
-
-<label for="district" class="block text-sm
-
-font-medium text-gray-700 mb-1"><span
-
-class="text-red-500">*</span>DISTRICT</label>
-
-<div class="relative rounded-md shadow-sm">
-
-<div class="absolute inset-y-0 left-0 pl-3
-    flex items-center pointer-events-none">
-
-<i class="fas fa-map-marker-alt
-
-text-gray-400"></i>
-
-</div>
-
-<input type="text" name="district"
-
-id="district" class="block w-full pl-10 pr-3 py-2 border
-
-border-gray-300 rounded-md focus:ring-indigo-500
-
-focus:border-indigo-500 sm:text-sm" placeholder="--Select District--"
-
-required>
-
-</div>
-
-</div>
-
-<!-- Town/Locality -->
-
-<div class="md:col-span-2">
-
-<label for="townLocality" class="block text-sm
-
-font-medium text-gray-700 mb-1">TOWN/LOCALITY</label>
-
-<div class="relative rounded-md shadow-sm">
-
-<div class="absolute inset-y-0 left-0 pl-3
-
-flex items-center pointer-events-none">
-
-<i class="fas fa-building
-
-text-gray-400"></i>
-
-</div>
-
-<input type="text" name="townLocality"
-
-id="townLocality" class="block w-full pl-10 pr-3 py-2 border
-
-border-gray-300 rounded-md focus:ring-indigo-500
-
-focus:border-indigo-500 sm:text-sm" placeholder="Town/Locality">
-
-</div>
-
-</div>
-
-<!-- Address Line 1 -->
-
-<div class="md:col-span-2">
-
-<label for="addressLine1" class="block text-sm
-
-font-medium text-gray-700 mb-1">ADDRESS LINE 1</label>
-
-<div class="relative rounded-md shadow-sm">
-
-<div class="absolute inset-y-0 left-0 pl-3
-
-flex items-center pointer-events-none">
-
-<i class="fas fa-map text-gray-400"></i>
-
-</div>
-
-<input type="text" name="addressLine1"
-
-id="addressLine1" class="block w-full pl-10 pr-3 py-2 border
-
-border-gray-300 rounded-md focus:ring-indigo-500
-
-focus:border-indigo-500 sm:text-sm" placeholder="Address Line 1">
-
-</div>
-
-</div>
-
-<!-- Address Line 2 -->
-
-<div class="md:col-span-2">
-
-<label for="addressLine2" class="block text-sm
-
-font-medium text-gray-700 mb-1">ADDRESS LINE 2</label>
-
-<div class="relative rounded-md shadow-sm">
-
-<div class="absolute inset-y-0 left-0 pl-3
-    flex items-center pointer-events-none">
-
-<i class="fas fa-map text-gray-400"></i>
-
-</div>
-
-<input type="text" name="addressLine2"
-
-id="addressLine2" class="block w-full pl-10 pr-3 py-2 border
-
-border-gray-300 rounded-md focus:ring-indigo-500
-
-focus:border-indigo-500 sm:text-sm" placeholder="Address Line 2">
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Submit Button -->
-
-<div class="flex justify-center mt-8">
-
-<button type="submit" class="inline-flex
-
-justify-center py-3 px-8 border border-transparent shadow-sm text-lg
-
-font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700
-
-focus:outline-none focus:ring-2 focus:ring-offset-2
-
-focus:ring-indigo-500 transition duration-150 ease-in-out transform
-
-hover:scale-105">
-
-Submit
-
-</button>
-
-</div>
-
-</form>
-
-</div>
-
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Puducherry">Puducherry</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- District -->
+                <div>
+                    <label for="district" class="block text-sm font-medium text-gray-700 mb-1"><span class="text-red-500">*</span>DISTRICT</label>
+                    <div class="relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-map-marker-alt text-gray-400"></i>
+                        </div>
+                        <input type="text" name="district" id="district" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="--Select District--" required>
+                    </div>
+                </div>
+                <!-- Town/Locality -->
+                <div class="md:col-span-2">
+                    <label for="townLocality" class="block text-sm font-medium text-gray-700 mb-1">TOWN/LOCALITY</label>
+                    <div class="relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-building text-gray-400"></i>
+                        </div>
+                        <input type="text" name="townLocality" id="townLocality" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Town/Locality">
+                    </div>
+                </div>
+                <!-- Address Line 1 -->
+                <div class="md:col-span-2">
+                    <label for="addressLine1" class="block text-sm font-medium text-gray-700 mb-1">ADDRESS LINE 1</label>
+                    <div class="relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-map text-gray-400"></i>
+                        </div>
+                        <input type="text" name="addressLine1" id="addressLine1" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Address Line 1">
+                    </div>
+                </div>
+                <!-- Address Line 2 -->
+                <div class="md:col-span-2">
+                    <label for="addressLine2" class="block text-sm font-medium text-gray-700 mb-1">ADDRESS LINE 2</label>
+                    <div class="relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-map text-gray-400"></i>
+                        </div>
+                        <input type="text" name="addressLine2" id="addressLine2" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Address Line 2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center mt-8">
+                <button type="submit" class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:scale-105">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
 </body>
-
 </html>
